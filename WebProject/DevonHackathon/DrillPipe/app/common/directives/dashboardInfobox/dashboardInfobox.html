@@ -1,0 +1,24 @@
+﻿<div class="col-lg-3 col-xs-6">
+    <div class="small-box {{color}}" data-ng-if="boxstyle==='infobox'">
+        <div class="inner">
+            <h3>{{count}}</h3>
+
+            <p>{{title}}</p>
+        </div>
+        <div class="icon">
+            <i class="{{icon}}" ></i>
+        </div>
+        <a data-ng-if="control" class="small-box-footer" href="#/{{control}}">More info <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+    
+    <div class="info-box" data-ng-if="boxstyle==='smallbox'">
+        <span class="info-box-icon {{color}}">
+            <a style="color:white" href="#/{{control}}" title="{{count}} - {{title}}"><i class="{{icon}}"></i></a>
+        </span>
+        <div class="info-box-content">
+            <span class="info-box-text content-desktop">{{title}}</span>
+            <span class="info-box-number content-desktop">{{count}}</span>
+            <span data-ng-if="control"><a style="color:#9d9d9d" href="#/{{control}}" class="content-desktop">More info <i class="fa fa-arrow-circle-right"></i></a></span>
+        </div>
+    </div>
+</div>

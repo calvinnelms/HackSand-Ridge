@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="manifest.appcache" ng-app="app">
+<head>
+    <title>DrillPipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <link href="Content/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/ui-grid.css" rel="stylesheet" />
+    <link href="Content/theme-fresh.min.css" rel="stylesheet" />
+    <link href="Content/sd.bootstrap.css" rel="stylesheet" />
+    <link href="Content/sd.css" rel="stylesheet" />
+    <!--inject:js-->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular-messages.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
+    <script src="Scripts/linq.min.js"></script>
+    <script src="Scripts/ng-file-upload.min.js"></script>
+    <script src="Scripts/sd.client.min.js"></script>
+    <script src="Scripts/ui-grid.min.js"></script>
+    <script src="Scripts/xml2json.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/mg/packages/angular-ui/validate.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/common/controllers/footerController.js"></script>
+    <script src="app/common/controllers/modalController.js"></script>
+    <script src="app/common/controllers/navController.js"></script>
+    <script src="app/common/controllers/noAppController.js"></script>
+    <script src="app/common/directives/bindDynamicHtml.js"></script>
+    <script src="app/common/directives/embedSrc.js"></script>
+    <script src="app/common/directives/sdFocus.js"></script>
+    <script src="app/common/filters/getDatePartFilter.js"></script>
+    <script src="app/common/filters/jsonDateFilter.js"></script>
+    <script src="app/common/filters/offsetFilter.js"></script>
+    <script src="app/common/services/actionService.js"></script>
+    <script src="app/common/services/aliasService.js"></script>
+    <script src="app/common/services/authService.js"></script>
+    <script src="app/common/services/commonService.js"></script>
+    <script src="app/common/services/dataService.js"></script>
+    <script src="app/common/services/dataWorkerService.js"></script>
+    <script src="app/common/services/demoService.js"></script>
+    <script src="app/common/services/drillPipesService.js"></script>
+    <script src="app/common/services/geoLocationService.js"></script>
+    <script src="app/common/services/navService.js"></script>
+    <script src="app/common/services/sdErrorLoggerService.js"></script>
+    <script src="app/common/services/securityService.js"></script>
+    <script src="app/common/services/spService.js"></script>
+    <script src="app/common/directives/dashboardInfobox/dashboardInfobox.js"></script>
+    <script src="app/about/aboutController.js"></script>
+    <script src="app/about/pwController.js"></script>
+    <script src="app/admin/adminController.js"></script>
+    <script src="app/demo/demoController.js"></script>
+    <script src="app/drillPipes/drillPipesController.js"></script>
+    <!--endinject-->
+</head>
+<body>
+    <div style="padding: 10px;">
+        <div ng-controller="navController as ctrl">
+            <div ng-include="'app/common/controllers/nav.html'"></div>
+        </div>
+        <div ng-view ng-cloak></div>
+        <div ng-controller="footerController as ctrl">
+            <div ng-include="'app/common/controllers/footer.html'"></div>
+        </div>
+    </div>
+</body>
+</html>

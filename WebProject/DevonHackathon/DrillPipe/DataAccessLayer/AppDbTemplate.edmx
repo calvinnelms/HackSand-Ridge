@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AppDbTemplateModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EmployeeInformation">
+          <Key>
+            <PropertyRef Name="EmployeeNumber" />
+          </Key>
+          <Property Name="EmployeeNumber" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="255" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="DisplayName" Type="varchar" MaxLength="511" />
+          <Property Name="Suffix" Type="varchar" MaxLength="255" />
+          <Property Name="Org1" Type="varchar" MaxLength="255" />
+          <Property Name="Org1Code" Type="varchar" MaxLength="255" />
+          <Property Name="Org2" Type="varchar" MaxLength="255" />
+          <Property Name="Org2Code" Type="varchar" MaxLength="255" />
+          <Property Name="Org3" Type="varchar" MaxLength="255" />
+          <Property Name="Org3Code" Type="varchar" MaxLength="255" />
+          <Property Name="Org4" Type="varchar" MaxLength="255" />
+          <Property Name="Org4Code" Type="varchar" MaxLength="255" />
+          <Property Name="WorkLocation" Type="varchar" MaxLength="255" />
+          <Property Name="WorkLocationCode" Type="varchar" MaxLength="255" />
+          <Property Name="PayGroup" Type="varchar" MaxLength="255" />
+          <Property Name="FLSAType" Type="varchar" MaxLength="255" />
+          <Property Name="JobTitle" Type="varchar" MaxLength="255" />
+          <Property Name="EmployeeType" Type="varchar" MaxLength="255" />
+          <Property Name="StatusEffectiveDate" Type="datetime" />
+          <Property Name="KronosEffectiveDate" Type="datetime" />
+          <Property Name="LastHireDate" Type="datetime" />
+          <Property Name="TerminationDate" Type="datetime" />
+          <Property Name="BirthdayMonth" Type="int" />
+          <Property Name="BirthdayDay" Type="int" />
+          <Property Name="RecordCreatedDate" Type="datetime" />
+          <Property Name="AcknowledgementDate" Type="datetime" />
+          <Property Name="EepEEID" Type="varchar" MaxLength="255" />
+          <Property Name="JobCode" Type="varchar" MaxLength="20" />
+          <Property Name="LegalHold" Type="int" />
+          <Property Name="Company" Type="varchar" MaxLength="255" />
+          <Property Name="Division" Type="varchar" MaxLength="255" />
+          <Property Name="Department" Type="varchar" MaxLength="255" />
+          <Property Name="ADDepartment" Type="varchar" MaxLength="255" />
+          <Property Name="ManagerFirstName" Type="varchar" MaxLength="255" />
+          <Property Name="ManagerLastName" Type="varchar" MaxLength="255" />
+          <Property Name="ManagerDisplayName" Type="varchar" MaxLength="511" />
+          <Property Name="ManagerEmployeeNumber" Type="int" />
+          <Property Name="CurrentStatusCode" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="NameAddressMaster">
+          <Key>
+            <PropertyRef Name="NAM_ID" />
+          </Key>
+          <Property Name="NAM_ID" Type="varchar" MaxLength="254" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="254" />
+          <Property Name="NAME2" Type="varchar" MaxLength="254" />
+          <Property Name="ADDRESS1" Type="varchar" MaxLength="254" />
+          <Property Name="ADDRESS2" Type="varchar" MaxLength="254" />
+          <Property Name="CITY" Type="varchar" MaxLength="254" />
+          <Property Name="COUNTY" Type="varchar" MaxLength="254" />
+          <Property Name="STATE_ID" Type="varchar" MaxLength="254" />
+          <Property Name="ZIP" Type="varchar" MaxLength="254" />
+          <Property Name="TELEPHONE" Type="varchar" MaxLength="254" />
+          <Property Name="TAX_ID" Type="varchar" MaxLength="254" />
+          <Property Name="NAME_KEY" Type="varchar" MaxLength="254" />
+          <Property Name="COUNTRY_ID" Type="varchar" MaxLength="254" />
+          <Property Name="CONVERSION_DATA" Type="varchar" MaxLength="254" />
+          <Property Name="PAY_COUNTY_CODE" Type="varchar" MaxLength="254" />
+          <Property Name="FAX_NUMBER" Type="varchar" MaxLength="254" />
+          <Property Name="ADDRESS3" Type="varchar" MaxLength="254" />
+          <Property Name="NAME_CONTROL_1099" Type="varchar" MaxLength="254" />
+          <Property Name="NAME_1099" Type="varchar" MaxLength="254" />
+          <Property Name="NAME2_1099" Type="varchar" MaxLength="254" />
+          <Property Name="ADDRESS_1099" Type="varchar" MaxLength="254" />
+          <Property Name="CITY_1099" Type="varchar" MaxLength="254" />
+          <Property Name="STATE_1099_ID" Type="varchar" MaxLength="254" />
+          <Property Name="ZIP_1099" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="SiteHeader">
+          <Key>
+            <PropertyRef Name="IDSITE" />
+          </Key>
+          <Property Name="IDSITE" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="SITENAME" Type="varchar" MaxLength="100" />
+          <Property Name="TYP1" Type="varchar" MaxLength="50" />
+          <Property Name="TYP2" Type="varchar" MaxLength="50" />
+          <Property Name="STATUS1" Type="varchar" MaxLength="50" />
+          <Property Name="STATUS2" Type="varchar" MaxLength="50" />
+          <Property Name="PROBLEMFLAG" Type="smallint" />
+          <Property Name="OPERATOR" Type="varchar" MaxLength="50" />
+          <Property Name="OPERATORCODE" Type="varchar" MaxLength="50" />
+          <Property Name="SURFACEFILENO" Type="varchar" MaxLength="50" />
+          <Property Name="SITEID1" Type="varchar" MaxLength="50" />
+          <Property Name="SITEID2" Type="varchar" MaxLength="50" />
+          <Property Name="SITEID3" Type="varchar" MaxLength="50" />
+          <Property Name="CORPLEVEL1" Type="varchar" MaxLength="50" />
+          <Property Name="CORPLEVEL2" Type="varchar" MaxLength="50" />
+          <Property Name="CORPLEVEL3" Type="varchar" MaxLength="50" />
+          <Property Name="CORPLEVEL4" Type="varchar" MaxLength="50" />
+          <Property Name="COUNTRY" Type="varchar" MaxLength="50" />
+          <Property Name="STATEPROV" Type="varchar" MaxLength="50" />
+          <Property Name="COUNTY" Type="varchar" MaxLength="50" />
+          <Property Name="LEGALSURVEYPRIMARYCALC" Type="varchar" MaxLength="50" />
+          <Property Name="LEGALSURVEYPRIMARYSORT" Type="varchar" MaxLength="50" />
+          <Property Name="AREA" Type="varchar" MaxLength="50" />
+          <Property Name="FIELDNAME" Type="varchar" MaxLength="50" />
+          <Property Name="FIELDCODE" Type="varchar" MaxLength="10" />
+          <Property Name="FIELDOFFICE" Type="varchar" MaxLength="50" />
+          <Property Name="USERTXT1" Type="varchar" MaxLength="50" />
+          <Property Name="USERTXT2" Type="varchar" MaxLength="50" />
+          <Property Name="USERTXT3" Type="varchar" MaxLength="50" />
+          <Property Name="USERTXT4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ObjectGuid" />
+          </Key>
+          <Property Name="ObjectGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DistinguishedName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="EmployeeNumber" Type="varchar" MaxLength="6" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="DisplayName" Type="varchar" MaxLength="255" />
+          <Property Name="Account" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Department" Type="varchar" MaxLength="255" />
+          <Property Name="JobTitle" Type="varchar" MaxLength="255" />
+          <Property Name="Company" Type="varchar" MaxLength="255" />
+          <Property Name="ManagerDistinguishedName" Type="varchar" MaxLength="255" />
+          <Property Name="AccountType" Type="varchar" MaxLength="1" />
+          <Property Name="OrganizationalUnit" Type="varchar" MaxLength="43" Nullable="false" />
+          <Property Name="Office" Type="varchar" MaxLength="20" />
+          <Property Name="TelephoneNumber" Type="varchar" MaxLength="20" />
+          <Property Name="MobileNumber" Type="varchar" MaxLength="20" />
+          <Property Name="Street" Type="varchar" MaxLength="255" />
+          <Property Name="POBox" Type="varchar" MaxLength="1" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+          <Property Name="State" Type="varchar" MaxLength="20" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="255" />
+          <Property Name="Country" Type="varchar" MaxLength="255" />
+          <Property Name="IsDisabled" Type="bit" />
+          <Property Name="ExpirationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WellHeader">
+          <Key>
+            <PropertyRef Name="IDWELL" />
+          </Key>
+          <Property Name="IDWELL" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="WELLNAME" Type="varchar" MaxLength="100" />
+          <Property Name="AREA" Type="varchar" MaxLength="50" />
+          <Property Name="BASIN" Type="varchar" MaxLength="100" />
+          <Property Name="BASINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="COUNTRY" Type="varchar" MaxLength="50" />
+          <Property Name="COUNTY" Type="varchar" MaxLength="50" />
+          <Property Name="CURRENTWELLSTATUS1" Type="varchar" MaxLength="50" />
+          <Property Name="CURRENTWELLSTATUS2" Type="varchar" MaxLength="50" />
+          <Property Name="DIRECTIONSTOWELL" Type="varchar" MaxLength="2000" />
+          <Property Name="DIVISION" Type="varchar" MaxLength="100" />
+          <Property Name="DIVISIONCODE" Type="varchar" MaxLength="100" />
+          <Property Name="DTTMABANDON" Type="datetime2" Precision="3" />
+          <Property Name="DTTMFIRSTPROD" Type="datetime2" Precision="3" />
+          <Property Name="DTTMRR" Type="datetime2" Precision="3" />
+          <Property Name="DTTMSPUD" Type="datetime2" Precision="3" />
+          <Property Name="DTTMSTATUSCALC" Type="datetime2" Precision="3" />
+          <Property Name="DTTMWELLCLASS" Type="datetime2" Precision="3" />
+          <Property Name="DTTMWELLLIC" Type="datetime2" Precision="3" />
+          <Property Name="LATITUDE" Type="float" />
+          <Property Name="LONGITUDE" Type="float" />
+          <Property Name="OPERATOR" Type="varchar" MaxLength="50" />
+          <Property Name="OPERATORCODE" Type="varchar" MaxLength="50" />
+          <Property Name="STATEPROV" Type="varchar" MaxLength="50" />
+          <Property Name="USERDTTM1" Type="datetime2" Precision="3" />
+          <Property Name="USERDTTM2" Type="datetime2" Precision="3" />
+          <Property Name="USERDTTM3" Type="datetime2" Precision="3" />
+          <Property Name="USERDTTM4" Type="datetime2" Precision="3" />
+          <Property Name="USERDTTM5" Type="datetime2" Precision="3" />
+          <Property Name="WELLIDA" Type="varchar" MaxLength="50" />
+          <Property Name="WELLIDB" Type="varchar" MaxLength="50" />
+          <Property Name="WELLIDC" Type="varchar" MaxLength="50" />
+          <Property Name="WELLIDD" Type="varchar" MaxLength="50" />
+          <Property Name="WELLIDE" Type="varchar" MaxLength="50" />
+          <Property Name="WELLTYP1" Type="varchar" MaxLength="100" />
+          <Property Name="WELLTYP2" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="AppDbTemplateModelStoreContainer">
+          <EntitySet Name="EmployeeInformation" EntityType="Self.EmployeeInformation" Schema="DataWarehouse" store:Type="Tables" />
+          <EntitySet Name="NameAddressMaster" EntityType="Self.NameAddressMaster" Schema="DataWarehouse" store:Type="Tables" />
+          <EntitySet Name="SiteHeader" EntityType="Self.SiteHeader" Schema="DataWarehouse" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="DataWarehouse" store:Type="Tables" />
+          <EntitySet Name="WellHeader" EntityType="Self.WellHeader" Schema="DataWarehouse" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AppDbTemplateModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EmployeeInformation">
+          <Key>
+            <PropertyRef Name="EmployeeNumber" />
+          </Key>
+          <Property Name="EmployeeNumber" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="511" FixedLength="false" Unicode="false" />
+          <Property Name="Suffix" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org1Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org2Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org3Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Org4Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WorkLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WorkLocationCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PayGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FLSAType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="JobTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StatusEffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="KronosEffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="LastHireDate" Type="DateTime" Precision="3" />
+          <Property Name="TerminationDate" Type="DateTime" Precision="3" />
+          <Property Name="BirthdayMonth" Type="Int32" />
+          <Property Name="BirthdayDay" Type="Int32" />
+          <Property Name="RecordCreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="AcknowledgementDate" Type="DateTime" Precision="3" />
+          <Property Name="EepEEID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="JobCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LegalHold" Type="Int32" />
+          <Property Name="Company" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Division" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ADDepartment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerFirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerDisplayName" Type="String" MaxLength="511" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerEmployeeNumber" Type="Int32" />
+          <Property Name="CurrentStatusCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NameAddressMaster">
+          <Key>
+            <PropertyRef Name="NAM_ID" />
+          </Key>
+          <Property Name="NAM_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="NAME2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS1" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="CITY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="STATE_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="TELEPHONE" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="TAX_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="NAME_KEY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTRY_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="CONVERSION_DATA" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="PAY_COUNTY_CODE" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="FAX_NUMBER" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS3" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="NAME_CONTROL_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="NAME_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="NAME2_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="CITY_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="STATE_1099_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SiteHeader">
+          <Key>
+            <PropertyRef Name="IDSITE" />
+          </Key>
+          <Property Name="IDSITE" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SITENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TYP1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TYP2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROBLEMFLAG" Type="Int16" />
+          <Property Name="OPERATOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATORCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SURFACEFILENO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SITEID1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SITEID2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SITEID3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORPLEVEL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORPLEVEL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORPLEVEL3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORPLEVEL4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATEPROV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEGALSURVEYPRIMARYCALC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LEGALSURVEYPRIMARYSORT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FIELDNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FIELDCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FIELDOFFICE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERTXT1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERTXT2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERTXT3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERTXT4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ObjectGuid" />
+          </Key>
+          <Property Name="ObjectGuid" Type="Guid" Nullable="false" />
+          <Property Name="DistinguishedName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmployeeNumber" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Account" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="JobTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Company" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ManagerDistinguishedName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AccountType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OrganizationalUnit" Type="String" MaxLength="43" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Office" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Street" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="POBox" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IsDisabled" Type="Boolean" />
+          <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="WellHeader">
+          <Key>
+            <PropertyRef Name="IDWELL" />
+          </Key>
+          <Property Name="IDWELL" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WELLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BASIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BASINCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CURRENTWELLSTATUS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CURRENTWELLSTATUS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECTIONSTOWELL" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DIVISION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DIVISIONCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DTTMABANDON" Type="DateTime" Precision="3" />
+          <Property Name="DTTMFIRSTPROD" Type="DateTime" Precision="3" />
+          <Property Name="DTTMRR" Type="DateTime" Precision="3" />
+          <Property Name="DTTMSPUD" Type="DateTime" Precision="3" />
+          <Property Name="DTTMSTATUSCALC" Type="DateTime" Precision="3" />
+          <Property Name="DTTMWELLCLASS" Type="DateTime" Precision="3" />
+          <Property Name="DTTMWELLLIC" Type="DateTime" Precision="3" />
+          <Property Name="LATITUDE" Type="Double" />
+          <Property Name="LONGITUDE" Type="Double" />
+          <Property Name="OPERATOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATORCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATEPROV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERDTTM1" Type="DateTime" Precision="3" />
+          <Property Name="USERDTTM2" Type="DateTime" Precision="3" />
+          <Property Name="USERDTTM3" Type="DateTime" Precision="3" />
+          <Property Name="USERDTTM4" Type="DateTime" Precision="3" />
+          <Property Name="USERDTTM5" Type="DateTime" Precision="3" />
+          <Property Name="WELLIDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WELLIDB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WELLIDC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WELLIDD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WELLIDE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WELLTYP1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WELLTYP2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="AppDbTemplateEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmployeeInformations" EntityType="Self.EmployeeInformation" />
+          <EntitySet Name="NameAddressMasters" EntityType="Self.NameAddressMaster" />
+          <EntitySet Name="SiteHeaders" EntityType="Self.SiteHeader" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="WellHeaders" EntityType="Self.WellHeader" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AppDbTemplateModelStoreContainer" CdmEntityContainer="AppDbTemplateEntities">
+          <EntitySetMapping Name="EmployeeInformations">
+            <EntityTypeMapping TypeName="AppDbTemplateModel.EmployeeInformation">
+              <MappingFragment StoreEntitySet="EmployeeInformation">
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="Org1" ColumnName="Org1" />
+                <ScalarProperty Name="Org1Code" ColumnName="Org1Code" />
+                <ScalarProperty Name="Org2" ColumnName="Org2" />
+                <ScalarProperty Name="Org2Code" ColumnName="Org2Code" />
+                <ScalarProperty Name="Org3" ColumnName="Org3" />
+                <ScalarProperty Name="Org3Code" ColumnName="Org3Code" />
+                <ScalarProperty Name="Org4" ColumnName="Org4" />
+                <ScalarProperty Name="Org4Code" ColumnName="Org4Code" />
+                <ScalarProperty Name="WorkLocation" ColumnName="WorkLocation" />
+                <ScalarProperty Name="WorkLocationCode" ColumnName="WorkLocationCode" />
+                <ScalarProperty Name="PayGroup" ColumnName="PayGroup" />
+                <ScalarProperty Name="FLSAType" ColumnName="FLSAType" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="StatusEffectiveDate" ColumnName="StatusEffectiveDate" />
+                <ScalarProperty Name="KronosEffectiveDate" ColumnName="KronosEffectiveDate" />
+                <ScalarProperty Name="LastHireDate" ColumnName="LastHireDate" />
+                <ScalarProperty Name="TerminationDate" ColumnName="TerminationDate" />
+                <ScalarProperty Name="BirthdayMonth" ColumnName="BirthdayMonth" />
+                <ScalarProperty Name="BirthdayDay" ColumnName="BirthdayDay" />
+                <ScalarProperty Name="RecordCreatedDate" ColumnName="RecordCreatedDate" />
+                <ScalarProperty Name="AcknowledgementDate" ColumnName="AcknowledgementDate" />
+                <ScalarProperty Name="EepEEID" ColumnName="EepEEID" />
+                <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+                <ScalarProperty Name="LegalHold" ColumnName="LegalHold" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="ADDepartment" ColumnName="ADDepartment" />
+                <ScalarProperty Name="ManagerFirstName" ColumnName="ManagerFirstName" />
+                <ScalarProperty Name="ManagerLastName" ColumnName="ManagerLastName" />
+                <ScalarProperty Name="ManagerDisplayName" ColumnName="ManagerDisplayName" />
+                <ScalarProperty Name="ManagerEmployeeNumber" ColumnName="ManagerEmployeeNumber" />
+                <ScalarProperty Name="CurrentStatusCode" ColumnName="CurrentStatusCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NameAddressMasters">
+            <EntityTypeMapping TypeName="AppDbTemplateModel.NameAddressMaster">
+              <MappingFragment StoreEntitySet="NameAddressMaster">
+                <ScalarProperty Name="NAM_ID" ColumnName="NAM_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="NAME2" ColumnName="NAME2" />
+                <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+                <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+                <ScalarProperty Name="STATE_ID" ColumnName="STATE_ID" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="TAX_ID" ColumnName="TAX_ID" />
+                <ScalarProperty Name="NAME_KEY" ColumnName="NAME_KEY" />
+                <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+                <ScalarProperty Name="CONVERSION_DATA" ColumnName="CONVERSION_DATA" />
+                <ScalarProperty Name="PAY_COUNTY_CODE" ColumnName="PAY_COUNTY_CODE" />
+                <ScalarProperty Name="FAX_NUMBER" ColumnName="FAX_NUMBER" />
+                <ScalarProperty Name="ADDRESS3" ColumnName="ADDRESS3" />
+                <ScalarProperty Name="NAME_CONTROL_1099" ColumnName="NAME_CONTROL_1099" />
+                <ScalarProperty Name="NAME_1099" ColumnName="NAME_1099" />
+                <ScalarProperty Name="NAME2_1099" ColumnName="NAME2_1099" />
+                <ScalarProperty Name="ADDRESS_1099" ColumnName="ADDRESS_1099" />
+                <ScalarProperty Name="CITY_1099" ColumnName="CITY_1099" />
+                <ScalarProperty Name="STATE_1099_ID" ColumnName="STATE_1099_ID" />
+                <ScalarProperty Name="ZIP_1099" ColumnName="ZIP_1099" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SiteHeaders">
+            <EntityTypeMapping TypeName="AppDbTemplateModel.SiteHeader">
+              <MappingFragment StoreEntitySet="SiteHeader">
+                <ScalarProperty Name="IDSITE" ColumnName="IDSITE" />
+                <ScalarProperty Name="SITENAME" ColumnName="SITENAME" />
+                <ScalarProperty Name="TYP1" ColumnName="TYP1" />
+                <ScalarProperty Name="TYP2" ColumnName="TYP2" />
+                <ScalarProperty Name="STATUS1" ColumnName="STATUS1" />
+                <ScalarProperty Name="STATUS2" ColumnName="STATUS2" />
+                <ScalarProperty Name="PROBLEMFLAG" ColumnName="PROBLEMFLAG" />
+                <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+                <ScalarProperty Name="OPERATORCODE" ColumnName="OPERATORCODE" />
+                <ScalarProperty Name="SURFACEFILENO" ColumnName="SURFACEFILENO" />
+                <ScalarProperty Name="SITEID1" ColumnName="SITEID1" />
+                <ScalarProperty Name="SITEID2" ColumnName="SITEID2" />
+                <ScalarProperty Name="SITEID3" ColumnName="SITEID3" />
+                <ScalarProperty Name="CORPLEVEL1" ColumnName="CORPLEVEL1" />
+                <ScalarProperty Name="CORPLEVEL2" ColumnName="CORPLEVEL2" />
+                <ScalarProperty Name="CORPLEVEL3" ColumnName="CORPLEVEL3" />
+                <ScalarProperty Name="CORPLEVEL4" ColumnName="CORPLEVEL4" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="STATEPROV" ColumnName="STATEPROV" />
+                <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+                <ScalarProperty Name="LEGALSURVEYPRIMARYCALC" ColumnName="LEGALSURVEYPRIMARYCALC" />
+                <ScalarProperty Name="LEGALSURVEYPRIMARYSORT" ColumnName="LEGALSURVEYPRIMARYSORT" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="FIELDNAME" ColumnName="FIELDNAME" />
+                <ScalarProperty Name="FIELDCODE" ColumnName="FIELDCODE" />
+                <ScalarProperty Name="FIELDOFFICE" ColumnName="FIELDOFFICE" />
+                <ScalarProperty Name="USERTXT1" ColumnName="USERTXT1" />
+                <ScalarProperty Name="USERTXT2" ColumnName="USERTXT2" />
+                <ScalarProperty Name="USERTXT3" ColumnName="USERTXT3" />
+                <ScalarProperty Name="USERTXT4" ColumnName="USERTXT4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AppDbTemplateModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ObjectGuid" ColumnName="ObjectGuid" />
+                <ScalarProperty Name="DistinguishedName" ColumnName="DistinguishedName" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="ManagerDistinguishedName" ColumnName="ManagerDistinguishedName" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="OrganizationalUnit" ColumnName="OrganizationalUnit" />
+                <ScalarProperty Name="Office" ColumnName="Office" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="POBox" ColumnName="POBox" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="IsDisabled" ColumnName="IsDisabled" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WellHeaders">
+            <EntityTypeMapping TypeName="AppDbTemplateModel.WellHeader">
+              <MappingFragment StoreEntitySet="WellHeader">
+                <ScalarProperty Name="IDWELL" ColumnName="IDWELL" />
+                <ScalarProperty Name="WELLNAME" ColumnName="WELLNAME" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="BASIN" ColumnName="BASIN" />
+                <ScalarProperty Name="BASINCODE" ColumnName="BASINCODE" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+                <ScalarProperty Name="CURRENTWELLSTATUS1" ColumnName="CURRENTWELLSTATUS1" />
+                <ScalarProperty Name="CURRENTWELLSTATUS2" ColumnName="CURRENTWELLSTATUS2" />
+                <ScalarProperty Name="DIRECTIONSTOWELL" ColumnName="DIRECTIONSTOWELL" />
+                <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+                <ScalarProperty Name="DIVISIONCODE" ColumnName="DIVISIONCODE" />
+                <ScalarProperty Name="DTTMABANDON" ColumnName="DTTMABANDON" />
+                <ScalarProperty Name="DTTMFIRSTPROD" ColumnName="DTTMFIRSTPROD" />
+                <ScalarProperty Name="DTTMRR" ColumnName="DTTMRR" />
+                <ScalarProperty Name="DTTMSPUD" ColumnName="DTTMSPUD" />
+                <ScalarProperty Name="DTTMSTATUSCALC" ColumnName="DTTMSTATUSCALC" />
+                <ScalarProperty Name="DTTMWELLCLASS" ColumnName="DTTMWELLCLASS" />
+                <ScalarProperty Name="DTTMWELLLIC" ColumnName="DTTMWELLLIC" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+                <ScalarProperty Name="OPERATORCODE" ColumnName="OPERATORCODE" />
+                <ScalarProperty Name="STATEPROV" ColumnName="STATEPROV" />
+                <ScalarProperty Name="USERDTTM1" ColumnName="USERDTTM1" />
+                <ScalarProperty Name="USERDTTM2" ColumnName="USERDTTM2" />
+                <ScalarProperty Name="USERDTTM3" ColumnName="USERDTTM3" />
+                <ScalarProperty Name="USERDTTM4" ColumnName="USERDTTM4" />
+                <ScalarProperty Name="USERDTTM5" ColumnName="USERDTTM5" />
+                <ScalarProperty Name="WELLIDA" ColumnName="WELLIDA" />
+                <ScalarProperty Name="WELLIDB" ColumnName="WELLIDB" />
+                <ScalarProperty Name="WELLIDC" ColumnName="WELLIDC" />
+                <ScalarProperty Name="WELLIDD" ColumnName="WELLIDD" />
+                <ScalarProperty Name="WELLIDE" ColumnName="WELLIDE" />
+                <ScalarProperty Name="WELLTYP1" ColumnName="WELLTYP1" />
+                <ScalarProperty Name="WELLTYP2" ColumnName="WELLTYP2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SDHackathonSQLModelStoreContainer" CdmEntityContainer="SDHackathonSQLEntities">
+    <EntitySetMapping Name="arduinoes">
+      <EntityTypeMapping TypeName="SDHackathonSQLModel.arduino">
+        <MappingFragment StoreEntitySet="arduino">
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

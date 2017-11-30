@@ -1,0 +1,15 @@
+﻿
+
+Demo Email From {URL}
+This email template demonstrates the use of the <i>EmailWrapper</i> class in conjuction with custom replacable tags to produce an email.
+
+This template is set up to read four distinct sections: CC, BCC, and Subject, all in the header, and of course the Body.  Certainly this can all be changed and customized to fit an individual application.  It is worth noting that the To, CC and BCC address strings can be comma-delimited lists of email addresses.
+
+If you open this file in your project you'll notice it has some HTML tags and other markers scattered throughout the text.  The HTML is for formatting the body of this email (assuming HTML format is desired), and the others are simply replacable markers for displaying data like the following:
+{Employees}
+
+You can do optional blocks of text by using custom HTML tags.  This produces results like the following:
+
+You'll only see this if today is an <EVENDATES>even</EVENDATES><ODDDATES>odd</ODDDATES> numbered date.
+
+The possibilities are really endless. <span style="font-size:large; font-weight:bold; color:#c41230;">Have fun!</span>

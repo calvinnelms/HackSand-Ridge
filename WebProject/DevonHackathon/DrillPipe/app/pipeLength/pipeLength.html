@@ -1,0 +1,68 @@
+﻿<ng-form id="demoForm" name="ctrl.demoForm">
+    <h2>PIC Pipe Length Entry</h2>
+    <div class="container">
+        <div class="">
+            <div class="row">
+                <div class="col-xs-12" style="text-align:center">
+                    <label>MEASUREMENT UNITS</label>
+                    <select class="form-control" ng-model="ctrl.UNITS"><option value="feet">FEET</option><option value="meters">METERS</option></select>
+                    <!--<div class="checkbox">
+                        <label>
+                            <label class="btn btn-default"><input required ng-model="ctrl.UNITS" type="radio" data-ng-value="feet" name="online"  /> Feet</label>
+                            <label class="btn btn-default"><input required ng-model="ctrl.UNITS" type="radio" data-ng-value="meters" name="online" /> Meters</label>
+                        </label>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color:bisque;border-radius:20px;border:1px solid black;padding:10px">
+            <div class="col-xs-12">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td><b>JOINT</b></td>
+                            <td><b>LENGTH</b></td>
+                            <td><b>UNITS</b></td>
+                        </tr>
+                    </thead>
+                    <tr ng-repeat="row in ctrl.rows">
+                        <td><button type="button" class="btn glyphicon glyphicon-pencil" width="30px" ng-click="ctrl.editRow(row.ID)"></button></td>
+                        <td>{{row.RUN}}</td>
+                        <td>{{row.LENGTH}}</td>
+                        <td>{{row.UNITS}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-4">
+                <label>JOINT</label>
+                <input type="text" class="form-control" ng-model="ctrl.row.RUN" readonly style="text-align:center"/>
+            </div>
+            <div class="col-xs-4">
+                <label>LENGTH</label>
+                <input type="text" class="form-control" ng-model="ctrl.row.LENGTH" id="length" />
+            </div>
+            <div class="col-xs-4" style="float:left;padding-top:25px">
+                <button type="button" class="btn btn-primary" ng-click="ctrl.addRow('true')">Save Pipe</button>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-xs-6" style="float:left">
+                <button type="button" class="btn btn-primary" ng-click="ctrl.save()">Complete Tally</button>
+            </div>
+            <div class="col-xs-6" style="float:right">
+                <button type="button" class="btn btn-primary" ng-click="ctrl.downloadCSV()">Download CSV</button>
+            </div>
+        </div>
+        <div class="row">
+            
+            <!--<div class="col-xs-12" style="float:right">
+                <button type="button" class="btn btn-primary" ng-click="ctrl.mailCSV()">Mail CSV</button>
+            </div>-->
+        </div>
+    </div>
+</ng-form>

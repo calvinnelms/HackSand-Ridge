@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Scripts/WebWorker/dataworker.min.js",
+    "inputFiles": [
+      "Scripts/WebWorker/dataworker.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/WebWorker/sd.dataworker.min.js",
+    "inputFiles": [
+      "Scripts/WebWorker/sd.dataworker.js"
+    ]
+  }
+]

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppDbTemplateModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmployeeInformation">
+    <Key>
+      <PropertyRef Name="EmployeeNumber" />
+    </Key>
+    <Property Name="EmployeeNumber" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="255" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="255" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="511" />
+    <Property Name="Suffix" Type="varchar" MaxLength="255" />
+    <Property Name="Org1" Type="varchar" MaxLength="255" />
+    <Property Name="Org1Code" Type="varchar" MaxLength="255" />
+    <Property Name="Org2" Type="varchar" MaxLength="255" />
+    <Property Name="Org2Code" Type="varchar" MaxLength="255" />
+    <Property Name="Org3" Type="varchar" MaxLength="255" />
+    <Property Name="Org3Code" Type="varchar" MaxLength="255" />
+    <Property Name="Org4" Type="varchar" MaxLength="255" />
+    <Property Name="Org4Code" Type="varchar" MaxLength="255" />
+    <Property Name="WorkLocation" Type="varchar" MaxLength="255" />
+    <Property Name="WorkLocationCode" Type="varchar" MaxLength="255" />
+    <Property Name="PayGroup" Type="varchar" MaxLength="255" />
+    <Property Name="FLSAType" Type="varchar" MaxLength="255" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="255" />
+    <Property Name="EmployeeType" Type="varchar" MaxLength="255" />
+    <Property Name="StatusEffectiveDate" Type="datetime" />
+    <Property Name="KronosEffectiveDate" Type="datetime" />
+    <Property Name="LastHireDate" Type="datetime" />
+    <Property Name="TerminationDate" Type="datetime" />
+    <Property Name="BirthdayMonth" Type="int" />
+    <Property Name="BirthdayDay" Type="int" />
+    <Property Name="RecordCreatedDate" Type="datetime" />
+    <Property Name="AcknowledgementDate" Type="datetime" />
+    <Property Name="EepEEID" Type="varchar" MaxLength="255" />
+    <Property Name="JobCode" Type="varchar" MaxLength="20" />
+    <Property Name="LegalHold" Type="int" />
+    <Property Name="Company" Type="varchar" MaxLength="255" />
+    <Property Name="Division" Type="varchar" MaxLength="255" />
+    <Property Name="Department" Type="varchar" MaxLength="255" />
+    <Property Name="ADDepartment" Type="varchar" MaxLength="255" />
+    <Property Name="ManagerFirstName" Type="varchar" MaxLength="255" />
+    <Property Name="ManagerLastName" Type="varchar" MaxLength="255" />
+    <Property Name="ManagerDisplayName" Type="varchar" MaxLength="511" />
+    <Property Name="ManagerEmployeeNumber" Type="int" />
+    <Property Name="CurrentStatusCode" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="NameAddressMaster">
+    <Key>
+      <PropertyRef Name="NAM_ID" />
+    </Key>
+    <Property Name="NAM_ID" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="254" />
+    <Property Name="NAME2" Type="varchar" MaxLength="254" />
+    <Property Name="ADDRESS1" Type="varchar" MaxLength="254" />
+    <Property Name="ADDRESS2" Type="varchar" MaxLength="254" />
+    <Property Name="CITY" Type="varchar" MaxLength="254" />
+    <Property Name="COUNTY" Type="varchar" MaxLength="254" />
+    <Property Name="STATE_ID" Type="varchar" MaxLength="254" />
+    <Property Name="ZIP" Type="varchar" MaxLength="254" />
+    <Property Name="TELEPHONE" Type="varchar" MaxLength="254" />
+    <Property Name="TAX_ID" Type="varchar" MaxLength="254" />
+    <Property Name="NAME_KEY" Type="varchar" MaxLength="254" />
+    <Property Name="COUNTRY_ID" Type="varchar" MaxLength="254" />
+    <Property Name="CONVERSION_DATA" Type="varchar" MaxLength="254" />
+    <Property Name="PAY_COUNTY_CODE" Type="varchar" MaxLength="254" />
+    <Property Name="FAX_NUMBER" Type="varchar" MaxLength="254" />
+    <Property Name="ADDRESS3" Type="varchar" MaxLength="254" />
+    <Property Name="NAME_CONTROL_1099" Type="varchar" MaxLength="254" />
+    <Property Name="NAME_1099" Type="varchar" MaxLength="254" />
+    <Property Name="NAME2_1099" Type="varchar" MaxLength="254" />
+    <Property Name="ADDRESS_1099" Type="varchar" MaxLength="254" />
+    <Property Name="CITY_1099" Type="varchar" MaxLength="254" />
+    <Property Name="STATE_1099_ID" Type="varchar" MaxLength="254" />
+    <Property Name="ZIP_1099" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="SiteHeader">
+    <Key>
+      <PropertyRef Name="IDSITE" />
+    </Key>
+    <Property Name="IDSITE" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="SITENAME" Type="varchar" MaxLength="100" />
+    <Property Name="TYP1" Type="varchar" MaxLength="50" />
+    <Property Name="TYP2" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS1" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS2" Type="varchar" MaxLength="50" />
+    <Property Name="PROBLEMFLAG" Type="smallint" />
+    <Property Name="OPERATOR" Type="varchar" MaxLength="50" />
+    <Property Name="OPERATORCODE" Type="varchar" MaxLength="50" />
+    <Property Name="SURFACEFILENO" Type="varchar" MaxLength="50" />
+    <Property Name="SITEID1" Type="varchar" MaxLength="50" />
+    <Property Name="SITEID2" Type="varchar" MaxLength="50" />
+    <Property Name="SITEID3" Type="varchar" MaxLength="50" />
+    <Property Name="CORPLEVEL1" Type="varchar" MaxLength="50" />
+    <Property Name="CORPLEVEL2" Type="varchar" MaxLength="50" />
+    <Property Name="CORPLEVEL3" Type="varchar" MaxLength="50" />
+    <Property Name="CORPLEVEL4" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="STATEPROV" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTY" Type="varchar" MaxLength="50" />
+    <Property Name="LEGALSURVEYPRIMARYCALC" Type="varchar" MaxLength="50" />
+    <Property Name="LEGALSURVEYPRIMARYSORT" Type="varchar" MaxLength="50" />
+    <Property Name="AREA" Type="varchar" MaxLength="50" />
+    <Property Name="FIELDNAME" Type="varchar" MaxLength="50" />
+    <Property Name="FIELDCODE" Type="varchar" MaxLength="10" />
+    <Property Name="FIELDOFFICE" Type="varchar" MaxLength="50" />
+    <Property Name="USERTXT1" Type="varchar" MaxLength="50" />
+    <Property Name="USERTXT2" Type="varchar" MaxLength="50" />
+    <Property Name="USERTXT3" Type="varchar" MaxLength="50" />
+    <Property Name="USERTXT4" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ObjectGuid" />
+    </Key>
+    <Property Name="ObjectGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DistinguishedName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="EmployeeNumber" Type="varchar" MaxLength="6" />
+    <Property Name="FirstName" Type="varchar" MaxLength="255" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="255" />
+    <Property Name="Account" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Department" Type="varchar" MaxLength="255" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="255" />
+    <Property Name="Company" Type="varchar" MaxLength="255" />
+    <Property Name="ManagerDistinguishedName" Type="varchar" MaxLength="255" />
+    <Property Name="AccountType" Type="varchar" MaxLength="1" />
+    <Property Name="OrganizationalUnit" Type="varchar" MaxLength="43" Nullable="false" />
+    <Property Name="Office" Type="varchar" MaxLength="20" />
+    <Property Name="TelephoneNumber" Type="varchar" MaxLength="20" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Street" Type="varchar" MaxLength="255" />
+    <Property Name="POBox" Type="varchar" MaxLength="1" />
+    <Property Name="City" Type="varchar" MaxLength="255" />
+    <Property Name="State" Type="varchar" MaxLength="20" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="255" />
+    <Property Name="Country" Type="varchar" MaxLength="255" />
+    <Property Name="IsDisabled" Type="bit" />
+    <Property Name="ExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WellHeader">
+    <Key>
+      <PropertyRef Name="IDWELL" />
+    </Key>
+    <Property Name="IDWELL" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="WELLNAME" Type="varchar" MaxLength="100" />
+    <Property Name="AREA" Type="varchar" MaxLength="50" />
+    <Property Name="BASIN" Type="varchar" MaxLength="100" />
+    <Property Name="BASINCODE" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTY" Type="varchar" MaxLength="50" />
+    <Property Name="CURRENTWELLSTATUS1" Type="varchar" MaxLength="50" />
+    <Property Name="CURRENTWELLSTATUS2" Type="varchar" MaxLength="50" />
+    <Property Name="DIRECTIONSTOWELL" Type="varchar" MaxLength="2000" />
+    <Property Name="DIVISION" Type="varchar" MaxLength="100" />
+    <Property Name="DIVISIONCODE" Type="varchar" MaxLength="100" />
+    <Property Name="DTTMABANDON" Type="datetime2" Precision="3" />
+    <Property Name="DTTMFIRSTPROD" Type="datetime2" Precision="3" />
+    <Property Name="DTTMRR" Type="datetime2" Precision="3" />
+    <Property Name="DTTMSPUD" Type="datetime2" Precision="3" />
+    <Property Name="DTTMSTATUSCALC" Type="datetime2" Precision="3" />
+    <Property Name="DTTMWELLCLASS" Type="datetime2" Precision="3" />
+    <Property Name="DTTMWELLLIC" Type="datetime2" Precision="3" />
+    <Property Name="LATITUDE" Type="float" />
+    <Property Name="LONGITUDE" Type="float" />
+    <Property Name="OPERATOR" Type="varchar" MaxLength="50" />
+    <Property Name="OPERATORCODE" Type="varchar" MaxLength="50" />
+    <Property Name="STATEPROV" Type="varchar" MaxLength="50" />
+    <Property Name="USERDTTM1" Type="datetime2" Precision="3" />
+    <Property Name="USERDTTM2" Type="datetime2" Precision="3" />
+    <Property Name="USERDTTM3" Type="datetime2" Precision="3" />
+    <Property Name="USERDTTM4" Type="datetime2" Precision="3" />
+    <Property Name="USERDTTM5" Type="datetime2" Precision="3" />
+    <Property Name="WELLIDA" Type="varchar" MaxLength="50" />
+    <Property Name="WELLIDB" Type="varchar" MaxLength="50" />
+    <Property Name="WELLIDC" Type="varchar" MaxLength="50" />
+    <Property Name="WELLIDD" Type="varchar" MaxLength="50" />
+    <Property Name="WELLIDE" Type="varchar" MaxLength="50" />
+    <Property Name="WELLTYP1" Type="varchar" MaxLength="100" />
+    <Property Name="WELLTYP2" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="AppDbTemplateModelStoreContainer">
+    <EntitySet Name="EmployeeInformation" EntityType="Self.EmployeeInformation" Schema="DataWarehouse" store:Type="Tables" />
+    <EntitySet Name="NameAddressMaster" EntityType="Self.NameAddressMaster" Schema="DataWarehouse" store:Type="Tables" />
+    <EntitySet Name="SiteHeader" EntityType="Self.SiteHeader" Schema="DataWarehouse" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="DataWarehouse" store:Type="Tables" />
+    <EntitySet Name="WellHeader" EntityType="Self.WellHeader" Schema="DataWarehouse" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

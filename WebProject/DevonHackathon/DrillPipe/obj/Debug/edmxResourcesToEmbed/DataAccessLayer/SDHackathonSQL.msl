@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SDHackathonSQLModelStoreContainer" CdmEntityContainer="SDHackathonSQLEntities">
+    <EntitySetMapping Name="pipeselections">
+      <EntityTypeMapping TypeName="SDHackathonSQLModel.pipeselection">
+        <MappingFragment StoreEntitySet="pipeselection">
+          <ScalarProperty Name="THREADLEN" ColumnName="THREADLEN" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="WT" ColumnName="WT" />
+          <ScalarProperty Name="DRIFT" ColumnName="DRIFT" />
+          <ScalarProperty Name="OPT" ColumnName="OPT" />
+          <ScalarProperty Name="CON" ColumnName="CON" />
+          <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+          <ScalarProperty Name="WW" ColumnName="WW" />
+          <ScalarProperty Name="OD" ColumnName="OD" />
+          <ScalarProperty Name="AFE" ColumnName="AFE" />
+          <ScalarProperty Name="WN" ColumnName="WN" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pipelengths">
+      <EntityTypeMapping TypeName="SDHackathonSQLModel.pipelength">
+        <MappingFragment StoreEntitySet="pipelengths">
+          <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="RUN" ColumnName="RUN" />
+          <ScalarProperty Name="PIPEID" ColumnName="PIPEID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wells">
+      <EntityTypeMapping TypeName="SDHackathonSQLModel.well">
+        <MappingFragment StoreEntitySet="wells">
+          <ScalarProperty Name="WN" ColumnName="WN" />
+          <ScalarProperty Name="AFE" ColumnName="AFE" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="presets">
+      <EntityTypeMapping TypeName="SDHackathonSQLModel.preset">
+        <MappingFragment StoreEntitySet="presets">
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="WT" ColumnName="WT" />
+          <ScalarProperty Name="DRIFT" ColumnName="DRIFT" />
+          <ScalarProperty Name="OPT" ColumnName="OPT" />
+          <ScalarProperty Name="CON" ColumnName="CON" />
+          <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+          <ScalarProperty Name="WW" ColumnName="WW" />
+          <ScalarProperty Name="OD" ColumnName="OD" />
+          <ScalarProperty Name="AFE" ColumnName="AFE" />
+          <ScalarProperty Name="WN" ColumnName="WN" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="FRIENDLYNAME" ColumnName="FRIENDLYNAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arduinoes">
+      <EntityTypeMapping TypeName="SDHackathonSQLModel.arduino">
+        <MappingFragment StoreEntitySet="arduino">
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

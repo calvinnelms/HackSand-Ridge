@@ -1,0 +1,36 @@
+﻿<div>
+    <label ng-click="ctrl.showButton = !ctrl.showButton">User:</label> {{ctrl.userInfo.DisplayName}} ({{ctrl.userInfo.UserName}})
+</div>
+<div>
+    <label>Timestamp:</label> {{ctrl.timestamp | date: 'MM/dd/yyyy h:mm:ss a Z'}}
+</div>
+<div>
+    <label>Online:</label> {{ctrl.clientInfo.onLine}}
+</div>
+<div>
+    <label>User Agent:</label> {{ctrl.clientInfo.userAgent}}
+</div>
+<div>
+    <label>Screen Size:</label> {{ctrl.clientInfo.screen}}
+</div>
+<div>
+    <label>Browser Size:</label> {{ctrl.clientInfo.browserSize}}
+</div>
+<div>
+    <label>Browser:</label> {{ctrl.clientInfo.browser}} {{ctrl.clientInfo.browserVersion}}
+</div>
+<div>
+    <label>Mobile:</label> {{ctrl.clientInfo.mobile}}
+</div>
+<div>
+    <label>OS:</label> {{ctrl.clientInfo.os}} {{ctrl.clientInfo.osVersion}}
+</div>
+<div>
+    <label ng-click="ctrl.showPW()">Code Base:</label> v{{ctrl.clientInfo.templateInfo.version}} - {{ctrl.clientInfo.templateInfo.lastUpdated}}
+</div>
+<div ng-show="ctrl.clientInfo.templateInfo.additionalInfo">
+    <label>Additional Info:</label> {{ctrl.clientInfo.templateInfo.additionalInfo}}
+</div>
+<div>
+    <button class="btn btn-sm btn-primary" ng-click="ctrl.refreshSite()" ng-show="ctrl.showButton">Refresh</button>
+</div>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDHackathonSQLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SDHackathonSQLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="pipeselections" EntityType="SDHackathonSQLModel.pipeselection" />
+    <EntitySet Name="pipelengths" EntityType="SDHackathonSQLModel.pipelength" />
+    <EntitySet Name="wells" EntityType="SDHackathonSQLModel.well" />
+    <EntitySet Name="presets" EntityType="SDHackathonSQLModel.preset" />
+    <EntitySet Name="arduinoes" EntityType="SDHackathonSQLModel.arduino" />
+  </EntityContainer>
+  <EntityType Name="pipeselection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WN" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="AFE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OD" Type="Double" Nullable="false" />
+    <Property Name="WW" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GRADE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CON" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRIFT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="THREADLEN" Type="Double" />
+  </EntityType>
+  <EntityType Name="pipelength">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PIPEID" Type="Int32" Nullable="false" />
+    <Property Name="RUN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LENGTH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UNITS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="well">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CC" />
+      <PropertyRef Name="AFE" />
+      <PropertyRef Name="WN" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CC" Type="Int32" Nullable="false" />
+    <Property Name="AFE" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="WN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="preset">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FRIENDLYNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WN" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="AFE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OD" Type="Double" Nullable="false" />
+    <Property Name="WW" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GRADE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CON" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DRIFT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="arduino">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LENGTH" Type="Double" Nullable="false" />
+  </EntityType>
+</Schema>

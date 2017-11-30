@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppDbTemplateModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EmployeeInformation">
+    <Key>
+      <PropertyRef Name="EmployeeNumber" />
+    </Key>
+    <Property Name="EmployeeNumber" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="511" FixedLength="false" Unicode="false" />
+    <Property Name="Suffix" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org1Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org2Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org3Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Org4Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WorkLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WorkLocationCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PayGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FLSAType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="JobTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StatusEffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="KronosEffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="LastHireDate" Type="DateTime" Precision="3" />
+    <Property Name="TerminationDate" Type="DateTime" Precision="3" />
+    <Property Name="BirthdayMonth" Type="Int32" />
+    <Property Name="BirthdayDay" Type="Int32" />
+    <Property Name="RecordCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="AcknowledgementDate" Type="DateTime" Precision="3" />
+    <Property Name="EepEEID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="JobCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LegalHold" Type="Int32" />
+    <Property Name="Company" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Division" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ADDepartment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerFirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerDisplayName" Type="String" MaxLength="511" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerEmployeeNumber" Type="Int32" />
+    <Property Name="CurrentStatusCode" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NameAddressMaster">
+    <Key>
+      <PropertyRef Name="NAM_ID" />
+    </Key>
+    <Property Name="NAM_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NAME2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS1" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="STATE_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ZIP" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NAME_KEY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="CONVERSION_DATA" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_COUNTY_CODE" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="FAX_NUMBER" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS3" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NAME_CONTROL_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NAME_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NAME2_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="CITY_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="STATE_1099_ID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ZIP_1099" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SiteHeader">
+    <Key>
+      <PropertyRef Name="IDSITE" />
+    </Key>
+    <Property Name="IDSITE" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SITENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TYP1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TYP2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROBLEMFLAG" Type="Int16" />
+    <Property Name="OPERATOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPERATORCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SURFACEFILENO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SITEID1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SITEID2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SITEID3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CORPLEVEL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CORPLEVEL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CORPLEVEL3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CORPLEVEL4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATEPROV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LEGALSURVEYPRIMARYCALC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LEGALSURVEYPRIMARYSORT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIELDNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIELDCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FIELDOFFICE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERTXT1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERTXT2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERTXT3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERTXT4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ObjectGuid" />
+    </Key>
+    <Property Name="ObjectGuid" Type="Guid" Nullable="false" />
+    <Property Name="DistinguishedName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmployeeNumber" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="JobTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerDistinguishedName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AccountType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="OrganizationalUnit" Type="String" MaxLength="43" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Office" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Street" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="POBox" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsDisabled" Type="Boolean" />
+    <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WellHeader">
+    <Key>
+      <PropertyRef Name="IDWELL" />
+    </Key>
+    <Property Name="IDWELL" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WELLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BASIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BASINCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENTWELLSTATUS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENTWELLSTATUS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECTIONSTOWELL" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DIVISION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DIVISIONCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DTTMABANDON" Type="DateTime" Precision="3" />
+    <Property Name="DTTMFIRSTPROD" Type="DateTime" Precision="3" />
+    <Property Name="DTTMRR" Type="DateTime" Precision="3" />
+    <Property Name="DTTMSPUD" Type="DateTime" Precision="3" />
+    <Property Name="DTTMSTATUSCALC" Type="DateTime" Precision="3" />
+    <Property Name="DTTMWELLCLASS" Type="DateTime" Precision="3" />
+    <Property Name="DTTMWELLLIC" Type="DateTime" Precision="3" />
+    <Property Name="LATITUDE" Type="Double" />
+    <Property Name="LONGITUDE" Type="Double" />
+    <Property Name="OPERATOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPERATORCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATEPROV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERDTTM1" Type="DateTime" Precision="3" />
+    <Property Name="USERDTTM2" Type="DateTime" Precision="3" />
+    <Property Name="USERDTTM3" Type="DateTime" Precision="3" />
+    <Property Name="USERDTTM4" Type="DateTime" Precision="3" />
+    <Property Name="USERDTTM5" Type="DateTime" Precision="3" />
+    <Property Name="WELLIDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WELLIDB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WELLIDC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WELLIDD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WELLIDE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WELLTYP1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="WELLTYP2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="AppDbTemplateEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EmployeeInformations" EntityType="Self.EmployeeInformation" />
+    <EntitySet Name="NameAddressMasters" EntityType="Self.NameAddressMaster" />
+    <EntitySet Name="SiteHeaders" EntityType="Self.SiteHeader" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="WellHeaders" EntityType="Self.WellHeader" />
+  </EntityContainer>
+</Schema>

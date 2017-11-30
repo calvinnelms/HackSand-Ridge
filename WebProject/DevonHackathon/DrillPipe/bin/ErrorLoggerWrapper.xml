@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ErrorLoggerWrapper</name>
+    </assembly>
+    <members>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.LogResponse">
+            <summary>
+            LogResponse Class
+            Object that is the returned response from ErrorLogger Service
+            </summary>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLogger.UriBase">
+            <summary>
+            This property allows you to specify on which server the ErrorLogger service should run. 
+            <para> </para>
+            By default it runs at http://errorlogger.sandridgeenergy.com/Soap/1.2/errorloggerservice.asmx.
+            <para> </para>
+            You may point it to stage by using http://stageerrorlogger.sandridgeenergy.com/Soap/1.2/errorloggerservice.asmx
+            <para></para>
+            or back to dev by using http://deverrorlogger.sandridgeenergy.com/Soap/1.2/errorloggerservice.asmx
+            </summary>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.Log(System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.Log(System.String,System.String,System.Reflection.MethodBase)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <param name="mb">use System.Reflection.MethodBase.GetCurrentMethod()</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.Log(System.String,System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <param name="method">String representation of current method</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogError(System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogError(System.String,System.String,System.Reflection.MethodBase)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <param name="mb">use System.Reflection.MethodBase.GetCurrentMethod()</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogError(System.String,System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application name</param>
+            <param name="message">Required Message</param>
+            <param name="method">String representation of current method</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogError(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="sdError">Requires an SDError Object</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogWarning(System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogWarning(System.String,System.String,System.Reflection.MethodBase)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <param name="mb">use System.Reflection.MethodBase.GetCurrentMethod()</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogWarning(System.String,System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application name</param>
+            <param name="message">Required Message</param>
+            <param name="method">String representation of current method</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogWarning(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="sdError">Requires an SDError Object</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogInformation(System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogInformation(System.String,System.String,System.Reflection.MethodBase)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application Name</param>
+            <param name="message">Required Message</param>
+            <param name="mb">use System.Reflection.MethodBase.GetCurrentMethod()</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogInformation(System.String,System.String,System.String)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="appName">Required Application name</param>
+            <param name="message">Required Message</param>
+            <param name="method">String representation of current method</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.LogInformation(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <summary>
+            Method that calls the ErrorLoggerService
+            </summary>
+            <param name="sdError">Requires a SDError Object</param>
+            <returns>returns a LogResponse object that includes LogSuccess, LogID, LogMessage, LogSource, and LogStackTrace</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.AddExtendedProperty(System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.MethodLocation(System.Reflection.MethodBase)">
+            <summary>
+            Obtains the exact method location for each function.
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLogger.CheckReturn(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogCompleted">
+            <remarks/>
+        </member>
+        <member name="E:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogInformationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogWarningCompleted">
+            <remarks/>
+        </member>
+        <member name="E:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogErrorCompleted">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.Log(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogInformation(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogInformationAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogInformationAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogWarning(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogWarningAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogWarningAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogError(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogErrorAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.LogErrorAsync(SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ErrorLoggerService.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.ErrorID">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.Application">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.Message">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.Severity">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.Method">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.Server">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.URI">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.User">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.HTTPHeader">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.Notify">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.EmailAddress">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.AdditionalInformation">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.SDError.ExtendedProperties">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.Severity">
+            <remarks/>
+        </member>
+        <member name="F:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.Severity.Information">
+            <remarks/>
+        </member>
+        <member name="F:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.Severity.Warning">
+            <remarks/>
+        </member>
+        <member name="F:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.Severity.Error">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ExtendedProperty">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ExtendedProperty.Name">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ExtendedProperty.Value">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ReturnException">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ReturnException.Message">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ReturnException.Source">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.ReturnException.StackTrace">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogInformationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogInformationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogInformationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogWarningCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogWarningCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogWarningCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogErrorCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogErrorCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:SDHelpers.ErrorLoggerWrapper.ErrorLoggerSvc.LogErrorCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

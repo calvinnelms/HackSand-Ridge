@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrillPipe", "DrillPipe\DrillPipe.csproj", "{66C7A968-EF75-47C0-B473-34F70A0F318A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoCommunication", "ArduinoCommunication\ArduinoCommunication.csproj", "{4B72A65E-7145-45FD-AC63-42F2637841D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66C7A968-EF75-47C0-B473-34F70A0F318A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C7A968-EF75-47C0-B473-34F70A0F318A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C7A968-EF75-47C0-B473-34F70A0F318A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C7A968-EF75-47C0-B473-34F70A0F318A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B72A65E-7145-45FD-AC63-42F2637841D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B72A65E-7145-45FD-AC63-42F2637841D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B72A65E-7145-45FD-AC63-42F2637841D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B72A65E-7145-45FD-AC63-42F2637841D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F79A78E3-6C72-46FE-9ED8-8F3FF15F0BE9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://okc1tfs0001:8080/tfs/custom%20web%20applications
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DrillPipe\\DrillPipe.csproj
+		SccProjectName1 = DrillPipe
+		SccLocalPath1 = DrillPipe
+		SccProjectUniqueName2 = ArduinoCommunication\\ArduinoCommunication.csproj
+		SccProjectName2 = ArduinoCommunication
+		SccLocalPath2 = ArduinoCommunication
+	EndGlobalSection
+EndGlobal

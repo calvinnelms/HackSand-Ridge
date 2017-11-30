@@ -1,0 +1,123 @@
+﻿<ng-form id="demoForm" name="ctrl.demoForm">
+    <h2>PIC Well/Pipe Selection <span ng-show="ctrl.well != undefined">{{ctrl.well.WN}}</span></h2>
+    <div class="container">
+        <div class="header">
+        <div class="row" ng-show="ctrl.well == undefined">
+            <div class="col-xs-12">
+                <label>Search for Well Name</label>
+                <select class="form-control" ng-model="ctrl.well" ng-change="ctrl.popWellData()"><option ng-repeat="w in ctrl.wells" value={{w}}>{{w.WN}}</option></select>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12">
+                <label>Well Name</label>
+                <span>{{ctrl.pipe.WN}}</span>
+            </div>
+        </div>-->
+        
+        <div class="row">
+            <div class="col-xs-12 col-xs-6">
+                <label>Cost Center</label>
+                <span>{{ctrl.well.CC}}</span>
+            </div>
+            <div class="col-xs-12 col-xs-6">
+                <label>AFE #</label>
+                <span>{{ctrl.well.AFE}}</span>
+            </div>
+        </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-12">
+                <label>PIPE PRESETS</label>
+                <select class="form-control" ng-model="ctrl.pipechoice" ng-change="ctrl.setPipe()"><option ng-repeat="p in ctrl.pipes" value="{{p}}">{{p.FRIENDLYNAME}}</option></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label>Outside Diameter</label><br/>
+                <select ng-model="ctrl.pipe.OD" class="form-control"><option ng-repeat="o in ctrl.options.od" value={{o}}>{{o}}</option></select>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <label>Weight/Wall</label>
+                <select ng-model="ctrl.pipe.WW" class="form-control"><option ng-repeat="w in ctrl.options.ww" value="{{w}}">{{w}}</option></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label>Grade</label>
+                <select ng-model="ctrl.pipe.GRADE" class="form-control"><option ng-repeat="g in ctrl.options.grade" value="{{g}}">{{g}}</option></select>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <label>Connection</label>
+                <select ng-model="ctrl.pipe.CON" class="form-control"><option ng-repeat="c in ctrl.options.con" value="{{c}}">{{c}}</option></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <label>Option</label>
+                <select ng-model="ctrl.pipe.OPT" class="form-control"><option ng-repeat="o in ctrl.options.opt" value="{{o}}">{{o}}</option></select>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <label>Drift Type</label>
+                <select ng-model="ctrl.pipe.DRIFT" class="form-control"><option ng-repeat="d in ctrl.options.drift" value="{{d}}">{{d}}</option></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <label>Minimum Wall Thickness</label>
+                <select ng-model="ctrl.pipe.WT" class="form-control"><option ng-repeat="w in ctrl.options.wt" value="{{w}}">{{w}}</option></select>
+            </div>
+        </div>
+        <br/>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-12">
+                <label>Purpose for Pipe</label>
+                <select ng-model="ctrl.pipe.DESC" class="form-control"><option ng-repeat="d in ctrl.options.desc" value="{{d}}">{{d}}</option></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12" style="text-align:center">
+                <button class="btn btn-primary" type="button" ng-click="ctrl.tally()">TALLY</button>
+            </div>
+        </div>
+    </div>
+    <!--<div class="container"> 
+        <div class="row">
+            <div class="col-xs-12">
+                <table width="100%"> 
+                    <thead>
+                    <tr>
+                        <td><b>CC</b></td>
+                        <td><b>WN</b></td>
+                        <td><b>AFE</b></td>
+                        <td><b>OD</b></td>
+                        <td><b>WW</b></td>
+                        <td><b>GRADE</b></td>
+                        <td><b>OPT</b></td>
+                        <td><b>DRIFT</b></td>
+                        <td><b>WT</b></td>
+                        <td><b>CON</b></td>
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="all in ctrl.all">
+                        <td>{{all.PipeSelection.CC}}</td>
+                        <td>{{all.PipeSelection.WN}}</td>
+                        <td>{{all.PipeSelection.AFE}}</td>
+                        <td>{{all.PipeSelection.OD}}</td>
+                        <td>{{all.PipeSelection.WW}}</td>
+                        <td>{{all.PipeSelection.GRADE}}</td>
+                        <td>{{all.PipeSelection.OPT}}</td>
+                        <td>{{all.PipeSelection.DRIFT}}</td>
+                        <td>{{all.PipeSelection.WT}}</td>
+                        <td>{{all.PipeSelection.CON}}</td>
+                    </tr>
+                    <tr>
+                        <td><div>This is a test</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>-->
+</ng-form>

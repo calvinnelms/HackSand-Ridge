@@ -1,0 +1,7 @@
+{
+  "name": "DrillPipe",
+  "private": true,
+  "dependencies": {
+    "ag-grid": "2.3.7"
+  }
+}

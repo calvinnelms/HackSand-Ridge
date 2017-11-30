@@ -1,0 +1,15 @@
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\ArduinoCommunication.exe.config
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\ArduinoCommunication.exe
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\ArduinoCommunication.pdb
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\obj\Debug\ArduinoCommunication.csprojResolveAssemblyReference.cache
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\obj\Debug\ArduinoCommunication.csproj.CoreCompileInputs.cache
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\obj\Debug\ArduinoCommunication.exe
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\obj\Debug\ArduinoCommunication.pdb
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\ArduinoCommunication.exe.manifest
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\ArduinoCommunication.application
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\obj\Debug\ArduinoCommunication.exe.manifest
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\obj\Debug\ArduinoCommunication.application
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\EntityFramework.dll
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\EntityFramework.SqlServer.dll
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\EntityFramework.xml
+C:\TFS\DevonHackathon\DevonHackathon\ArduinoCommunication\bin\Debug\EntityFramework.SqlServer.xml

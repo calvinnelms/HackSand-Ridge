@@ -1,0 +1,8 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title">{{ctrl.modalOptions.headerText}}</h4>
+</div>
+<div class="modal-body" ng-bind-html="ctrl.modalOptions.bodyText"></div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ctrl.ok()" ng-show="ctrl.modalOptions.showOK">{{ctrl.modalOptions.actionButtonText}}</button>
+    <button class="btn btn-warning" ng-click="ctrl.cancel()" ng-show="ctrl.modalOptions.showClose">{{ctrl.modalOptions.closeButtonText}}</button>
+</div>

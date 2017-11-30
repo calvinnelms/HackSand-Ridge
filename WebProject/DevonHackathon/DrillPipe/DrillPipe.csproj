@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66C7A968-EF75-47C0-B473-34F70A0F318A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DrillPipe</RootNamespace>
+    <AssemblyName>DrillPipe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADHelper">
+      <HintPath>\\sdrge.net\shared\SandRidge\ITDept\ITDevelopment\Common APIs\ADHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ErrorLoggerWrapper">
+      <HintPath>\\sdrge.net\shared\SandRidge\ITDept\ITDevelopment\Common APIs\ErrorLoggerWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EmailWrapper">
+      <HintPath>\\sdrge.net\shared\SandRidge\ITDept\ITDevelopment\Common APIs\EmailWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\about\about.html" />
+    <Content Include="app\about\aboutController.js" />
+    <Content Include="app\about\pw.html" />
+    <Content Include="app\about\pwController.js" />
+    <Content Include="app\admin\admin.html" />
+    <Content Include="app\admin\adminController.js" />
+    <Content Include="app\common\controllers\footer.html" />
+    <Content Include="app\common\controllers\footerController.js" />
+    <Content Include="app\common\controllers\modal.html" />
+    <Content Include="app\common\controllers\modalController.js" />
+    <Content Include="app\common\controllers\nav.html" />
+    <Content Include="app\common\controllers\navController.js" />
+    <Content Include="app\common\controllers\noapp.html" />
+    <Content Include="app\common\controllers\noAppController.js" />
+    <Content Include="app\common\directives\bindDynamicHtml.js" />
+    <Content Include="app\common\directives\embedSrc.js" />
+    <Content Include="app\common\directives\sdFocus.js" />
+    <Content Include="app\common\directives\dashboardInfobox\dashboardInfobox.html" />
+    <Content Include="app\common\directives\dashboardInfobox\dashboardInfobox.js" />
+    <Content Include="app\common\filters\getDatePartFilter.js" />
+    <Content Include="app\common\filters\jsonDateFilter.js" />
+    <Content Include="app\common\filters\offsetFilter.js" />
+    <Content Include="app\common\services\actionService.js" />
+    <Content Include="app\common\services\authService.js" />
+    <Content Include="app\common\services\commonService.js" />
+    <Content Include="app\common\services\aliasService.js" />
+    <Content Include="app\common\services\dataService.js" />
+    <Content Include="app\common\services\dataWorkerService.js" />
+    <Content Include="app\common\services\geoLocationService.js" />
+    <Content Include="app\common\services\navService.js" />
+    <Content Include="app\common\services\sdErrorLoggerService.js" />
+    <Content Include="app\common\services\securityService.js" />
+    <Content Include="app\common\services\spService.js" />
+    <Content Include="app\common\services\demoService.js" />
+    <Content Include="app\demo\demo.html" />
+    <Content Include="app\demo\demoController.js" />
+    <Content Include="app\pipeLength\pipeLength.html" />
+    <Content Include="app\pipeLength\pipeLengthController.js" />
+    <Content Include="app\pipeSelection\pipeSelection.html" />
+    <Content Include="app\pipeSelection\pipeSelectionController.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\favicon.ico" />
+    <Content Include="Content\sd.bootstrap.css" />
+    <Content Include="Content\sd.css" />
+    <Content Include="Content\theme-blue.css" />
+    <Content Include="Content\theme-blue.min.css" />
+    <Content Include="Content\theme-dark.css" />
+    <Content Include="Content\theme-dark.min.css" />
+    <Content Include="Content\theme-fresh.css" />
+    <Content Include="Content\theme-fresh.min.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="Content\ui-grid.css" />
+    <Content Include="Content\ui-grid.min.css" />
+    <Content Include="Content\watermark-logo.png" />
+    <Content Include="DataAccessLayer\AppDbTemplate.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppDbTemplate.edmx</DependentUpon>
+      <LastGenOutput>AppDbTemplate.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\AppDbTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppDbTemplate.edmx</DependentUpon>
+      <LastGenOutput>AppDbTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\SDHackathonSQL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDHackathonSQL.edmx</DependentUpon>
+      <LastGenOutput>SDHackathonSQL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\SDHackathonSQL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDHackathonSQL.edmx</DependentUpon>
+      <LastGenOutput>SDHackathonSQL.cs</LastGenOutput>
+    </Content>
+    <Content Include="EmailTemplates\SampleEmail.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\ui-grid.svg" />
+    <Content Include="fonts\ui-grid.woff" />
+    <Content Include="fonts\ui-grid.ttf" />
+    <Content Include="fonts\ui-grid.eot" />
+    <Content Include="debug.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-messages.js" />
+    <Content Include="Scripts\angular-messages.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js.map">
+      <DependentUpon>ui-bootstrap-tpls.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\mg\packages\angular-ui\validate.js" />
+    <Content Include="Scripts\mg\packages\angular-ui\validate.min.js" />
+    <Content Include="Scripts\WebWorker\dataworker.js" />
+    <Content Include="Scripts\WebWorker\dataworker.min.js">
+      <DependentUpon>dataworker.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\WebWorker\dataworker.min.js.map" />
+    <Content Include="Scripts\WebWorker\sd.dataworker.js" />
+    <Content Include="Scripts\WebWorker\sd.dataworker.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\angular-messages.min.js.map" />
+    <None Include="bundleconfig.json" />
+    <EntityDeploy Include="DataAccessLayer\AppDbTemplate.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppDbTemplate.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataAccessLayer\AppDbTemplate.edmx.diagram">
+      <DependentUpon>AppDbTemplate.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DataAccessLayer\SDHackathonSQL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SDHackathonSQL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataAccessLayer\SDHackathonSQL.edmx.diagram">
+      <DependentUpon>SDHackathonSQL.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\SDHackathon - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Scripts\linq.js" />
+    <Content Include="Scripts\linq.min.js" />
+    <Content Include="Scripts\linq-vsdoc.js" />
+    <Content Include="Scripts\ng-file-upload.js" />
+    <Content Include="Scripts\ng-file-upload.min.js" />
+    <Content Include="Scripts\sd.client.js" />
+    <Content Include="Scripts\sd.client.min.js" />
+    <Content Include="Scripts\ui-grid.js" />
+    <Content Include="Scripts\ui-grid.min.js" />
+    <Content Include="Scripts\xml2json.min.js" />
+    <None Include=".bowerrc" />
+    <None Include=".jscsrc" />
+    <None Include=".jshintrc" />
+    <Content Include="all.min.js" />
+    <Content Include="app_offline.html" />
+    <None Include="bower.json" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index.html" />
+    <Content Include="manifest.appcache" />
+    <None Include="package.json" />
+    <Content Include="packages.config" />
+    <Content Include="test.ico" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\RouteConfig.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="DataAccessLayer\AppDbTemplate.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppDbTemplate.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AppDbTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppDbTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AppDbTemplate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppDbTemplate.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\arduino.cs">
+      <DependentUpon>SDHackathonSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\DemoNotifications.cs" />
+    <Compile Include="DataAccessLayer\EmployeeInformation.cs">
+      <DependentUpon>AppDbTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\NameAddressMaster.cs">
+      <DependentUpon>AppDbTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\pipelength.cs">
+      <DependentUpon>SDHackathonSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\pipeselection.cs">
+      <DependentUpon>SDHackathonSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\preset.cs">
+      <DependentUpon>SDHackathonSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Repository.cs" />
+    <Compile Include="DataAccessLayer\SDHackathonSQL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDHackathonSQL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SDHackathonSQL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDHackathonSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SDHackathonSQL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDHackathonSQL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SiteHeader.cs">
+      <DependentUpon>AppDbTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\DataStructures.cs" />
+    <Compile Include="DataAccessLayer\User.cs">
+      <DependentUpon>AppDbTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\well.cs">
+      <DependentUpon>SDHackathonSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\WellHeader.cs">
+      <DependentUpon>AppDbTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\ActionFilters.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58373</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63136/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
